@@ -1,0 +1,81 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.exchange-history__main {
+  @include flex-column(flex-start, flex-start);
+  position: relative;
+  width: $container;
+  padding-left: 70px;
+  padding-right: 70px;
+  min-height: 477px;
+  margin-bottom: 110px;
+  background-color: $light;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    right: calc(50% - 1px);
+    width: 1px;
+    height: 289px;
+    background-color: $light_element;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.exchange-history__header {
+  align-self: start;
+  font-weight: 500;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  line-height: 140%;
+  color: $text;
+}
+
+.exchange-history__button {
+  align-self: start;
+  width: $small_button;
+  height: $small_button_height;
+  margin-top: 53px;
+  margin-bottom: 39px;
+  background: $background;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: $light;
+  border: none;
+}
+
+.exchange-history__list-container {
+  @include list-reset();
+  @include flex-column(flex-start, space-between);
+  flex-wrap: wrap;
+  width: 100%;
+  height: 247px;
+  font-size: 18px;
+
+  li {
+    margin-top: 33px;
+    @include flex-row(flex-start, center);
+  }
+
+  li:nth-child(n + 6) {
+    @include flex-row(flex-end, center);
+  }
+
+  li:nth-child(6n),
+  li:first-child {
+    margin-top: 0;
+  }
+}
+
+.exchange-history__item-date {
+  margin-right: 40px;
+}
+
+.exchange-history__item-arrow {
+  margin-left: 13px;
+  margin-right: 13px;
+}

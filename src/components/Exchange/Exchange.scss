@@ -1,0 +1,165 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../scss/fonts";
+
+.exchange__main {
+  @include flex-column(flex-start, space-between);
+  width: $container;
+  min-height: 421px;
+  background-color: $white;
+}
+
+.exchange__form {
+  margin: 0;
+  padding: 0;
+}
+
+.exchange__block {
+  @include flex-row(space-between, center);
+}
+
+.exchange__form-block {
+  @include flex-column(flex-start, center);
+}
+
+.exchange__form-block-wrapper {
+  @include flex-row(space-between, center);
+}
+
+.exchange__arrows {
+  @include flex-column(center, center);
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+
+.exchange__number-input {
+  @include base-font(500);
+  width: $input;
+  height: $input_height;
+  margin-right: 15px;
+  text-align: center;
+  border: 1px solid $text;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.exchange__date-input-wrapper {
+  position: relative;
+  width: $input;
+
+  ::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    width: 39px;
+    height: 42px;
+    background-image: url("./img/date.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.exchange__date-input {
+  @include base-font();
+  width: $input;
+  height: $input_height;
+  border: 1px solid $text;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+input.exchange__date-input:invalid {
+  color: red;
+}
+
+.exchange__date-input::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: transparent;
+}
+
+.exchange__currency {
+  @include flex-row(space-between, center);
+  position: relative;
+  height: $input_height;
+  border: 1px solid $text;
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 17px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.exchange__currency_list {
+  // display: block;
+  @include list-reset();
+  position: absolute;
+  top: $input_height;
+  left: 0;
+  padding-bottom: 3px;
+  border: 1px solid $text;
+  background-color: $white;
+  z-index: 1;
+}
+
+.exchange__currency_list--hided {
+  display: none;
+}
+
+.exchange__currency_select {
+  margin-left: 18px;
+  margin-right: 17px;
+  background-color: $white;
+}
+
+.exchange__currency_select:hover {
+  color: $white;
+  background-color: $background;
+}
+
+.exchange__currency_name {
+  margin-right: 12px;
+}
+
+.exchange__caption {
+  align-self: flex-start;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.exchange__save-button {
+  width: $button;
+  height: $input_height;
+  background: $background;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $light;
+  border: none;
+}
+
+.exchange__button-wrapper {
+  @include flex-row(space-between, center);
+  margin-top: 85px;
+}
+
+.exchange__currency_arrow {
+  width: 16px;
+  height: 8px;
+}
+
+.exchange__arrow {
+  width: 50px;
+  height: 16px;
+}

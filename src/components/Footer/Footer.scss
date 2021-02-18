@@ -1,0 +1,126 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.footer__wrapper {
+  width: 100%;
+  background: $light;
+}
+
+.footer__main {
+  @include flex-row(space-between, flex-start);
+  width: $desktop;
+  height: 224px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-left: 98px;
+  padding-right: 98px;
+  background: $light;
+}
+
+.footer__adress {
+  width: 252px;
+  font-size: 12px;
+  line-height: 140%;
+  color: $grey;
+}
+
+.footer__logo-svg {
+  width: 28px;
+  height: 25px;
+  margin-right: 9px;
+}
+
+.footer__title-svg {
+  width: 112px;
+  height: 14px;
+}
+
+.footer__menu {
+  @include list-reset();
+}
+
+.footer__menu-item {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer__item-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+}
+
+.footer__tel-block {
+  @include flex-row(flex-start, flex-start);
+}
+
+.footer__tel-text {
+  width: 167px;
+  font-size: 12px;
+  line-height: 140%;
+  color: $grey;
+
+  &--small {
+    width: 122px;
+  }
+}
+
+.footer__tel-link {
+  @include flex-column(flex-start, flex-start);
+  margin-left: 19px;
+}
+
+.footer__tel {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+}
+
+.footer__social-block {
+  @include flex-row(flex-start, flex-start);
+}
+
+.footer__social {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-fb {
+  width: 9px;
+  height: 16px;
+}
+
+.footer__social-insta {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__social-twit {
+  width: 16px;
+  height: 13px;
+}
+
+.footer__social-youtube {
+  width: 16px;
+  height: 13px;
+}
+
+.footer__tel-old-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__tel-svg {
+  width: 10px;
+  height: 16px;
+}

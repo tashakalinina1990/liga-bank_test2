@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../scss/fonts";
+
+.converter__wrapper {
+  width: 100%;
+}
+
+.converter__main {
+  @include flex-column(flex-start, center);
+  width: $desktop;
+  min-height: 1097px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+}
+
+.converter__header {
+  @include base-font(700);
+  color: $text;
+  font-size: 41px;
+  line-height: 41px;
+  margin-left: 98px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  align-self: start;
+}
